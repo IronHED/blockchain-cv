@@ -10,12 +10,13 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "4.0.0-beta",
+    "browsersync": "0.0.1-security",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "popper.js": "^1.12.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0"
   }
