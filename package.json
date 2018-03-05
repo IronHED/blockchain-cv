@@ -9,6 +9,7 @@
   "author": "Brad Traversy",
   "license": "MIT",
   "dependencies": {
+    "babel-register": "^6.26.0",
     "bootstrap": "4.0.0-beta",
     "browsersync": "0.0.1-security",
     "font-awesome": "^4.7.0",
