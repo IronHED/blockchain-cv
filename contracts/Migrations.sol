@@ -1,23 +1,44 @@
-pragma solidity ^0.4.17;
+pragma solidity ^0.4.15;
 
-contract Migrations {
-  address public owner;
-  uint public last_completed_migration;
+import "./CVExtender.sol";
 
-  modifier restricted() {
-    if (msg.sender == owner) _;
-  }
+contract BlockchainCV is CVExtender {
+    
+    struct Person {
+        string FirstName;
+        string LastName;
+    }
+    
+    struct CV {
+        string WebPage;
+        string Description;
+        string Title;
+        string Author;
+        string AuthorEmail;
+        mapping(address => Person) People;
+    }
+    
+    uint numberOfResumes;
+    mapping (address=>CV) ListOfResumes;
 
-  function Migrations() public {
-    owner = msg.sender;
-  }
+    function addCV(address newCV, string newWebPage, string newDescription, string newTitle, string newAuthor, string newAuthorEmailAddress) public {
+        ListOfResumes[newCV] = CV(newWebPage,newDescription,newTitle,newAuthor,newAuthorEmailAddress);
+        numberOfResumes++;
+    }
+    function getCVAddress() public constant returns(address, uint) {
+        return (msg.sender, this.balance);
+    }
+    function getAddress() public constant returns(string) {
+        return  ListOfResumes[msg.sender].WebPage;
+    }
 
-  function setCompleted(uint completed) public restricted {
-    last_completed_migration = completed;
-  }
-
-  function upgrade(address new_address) public restricted {
-    Migrations upgraded = Migrations(new_address);
-    upgraded.setCompleted(last_completed_migration);
-  }
+    function getDescription() public constant returns(string) {
+        return ListOfResumes[msg.sender].Description;
+    }
+    function getTitle() public constant returns(string) {
+        return ListOfResumes[msg.sender].Title;
+    }
+    function getAuthor() public constant returns(string, string) {
+        return (ListOfResumes[msg.sender].Author, ListOfResumes[msg.sender].AuthorEmail);
+    }
 }

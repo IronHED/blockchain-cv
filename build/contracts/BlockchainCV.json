@@ -1,0 +1,3422 @@
+{
+  "contractName": "BlockchainCV",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "elementsAreSet",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newCV",
+          "type": "address"
+        },
+        {
+          "name": "newWebPage",
+          "type": "string"
+        },
+        {
+          "name": "newDescription",
+          "type": "string"
+        },
+        {
+          "name": "newTitle",
+          "type": "string"
+        },
+        {
+          "name": "newAuthor",
+          "type": "string"
+        },
+        {
+          "name": "newAuthorEmailAddress",
+          "type": "string"
+        }
+      ],
+      "name": "addCV",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCVAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getDescription",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getTitle",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAuthor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b610cae8061001e6000396000f300606060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631a0925411461008857806338cc4831146101165780633d4d9e9d146101a45780637e9aef5314610200578063a5faa1251461022d578063b4e6389714610327578063ff3c1a8f146104af575b600080fd5b341561009357600080fd5b61009b61053d565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100db5780820151818401526020810190506100c0565b50505050905090810190601f1680156101085780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561012157600080fd5b610129610625565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561016957808201518184015260208101905061014e565b50505050905090810190601f1680156101965780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156101af57600080fd5b6101b761070d565b604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390f35b341561020b57600080fd5b610213610731565b604051808215151515815260200191505060405180910390f35b341561023857600080fd5b6102406107e5565b604051808060200180602001838103835285818151815260200191508051906020019080838360005b83811015610284578082015181840152602081019050610269565b50505050905090810190601f1680156102b15780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b838110156102ea5780820151818401526020810190506102cf565b50505050905090810190601f1680156103175780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b341561033257600080fd5b6104ad600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506109b9565b005b34156104ba57600080fd5b6104c2610acd565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156105025780820151818401526020810190506104e7565b50505050905090810190601f16801561052f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610545610bb5565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561061b5780601f106105f05761010080835404028352916020019161061b565b820191906000526020600020905b8154815290600101906020018083116105fe57829003601f168201915b5050505050905090565b61062d610bb5565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107035780601f106106d857610100808354040283529160200191610703565b820191906000526020600020905b8154815290600101906020018083116106e657829003601f168201915b5050505050905090565b600080333073ffffffffffffffffffffffffffffffffffffffff1631915091509091565b600061073b610bc9565b610743610bb5565b61074b610bb5565b61075361053d565b925060008351141561076857600093506107df565b610770610acd565b925060008351141561078557600093506107df565b61078d6107e5565b915091508192506000835114156107a757600093506107df565b8092506000835114156107bd57600093506107df565b6107c5610625565b92506000835114156107da57600093506107df565b600193505b50505090565b6107ed610bb5565b6107f5610bb5565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600301600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600401818054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561090e5780601f106108e35761010080835404028352916020019161090e565b820191906000526020600020905b8154815290600101906020018083116108f157829003601f168201915b50505050509150808054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109aa5780601f1061097f576101008083540402835291602001916109aa565b820191906000526020600020905b81548152906001019060200180831161098d57829003601f168201915b50505050509050915091509091565b60a06040519081016040528086815260200185815260200184815260200183815260200182815250600160008873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000820151816000019080519060200190610a3c929190610bdd565b506020820151816001019080519060200190610a59929190610bdd565b506040820151816002019080519060200190610a76929190610bdd565b506060820151816003019080519060200190610a93929190610bdd565b506080820151816004019080519060200190610ab0929190610bdd565b509050506000808154809291906001019190505550505050505050565b610ad5610bb5565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bab5780601f10610b8057610100808354040283529160200191610bab565b820191906000526020600020905b815481529060010190602001808311610b8e57829003601f168201915b5050505050905090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610c1e57805160ff1916838001178555610c4c565b82800160010185558215610c4c579182015b82811115610c4b578251825591602001919060010190610c30565b5b509050610c599190610c5d565b5090565b610c7f91905b80821115610c7b576000816000905550600101610c63565b5090565b905600a165627a7a72305820aaf62eb293540459ca6b7556102b5afa4bc90142ca6ff6bf7cc26cf8934123360029",
+  "deployedBytecode": "0x606060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631a0925411461008857806338cc4831146101165780633d4d9e9d146101a45780637e9aef5314610200578063a5faa1251461022d578063b4e6389714610327578063ff3c1a8f146104af575b600080fd5b341561009357600080fd5b61009b61053d565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100db5780820151818401526020810190506100c0565b50505050905090810190601f1680156101085780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561012157600080fd5b610129610625565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561016957808201518184015260208101905061014e565b50505050905090810190601f1680156101965780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156101af57600080fd5b6101b761070d565b604051808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018281526020019250505060405180910390f35b341561020b57600080fd5b610213610731565b604051808215151515815260200191505060405180910390f35b341561023857600080fd5b6102406107e5565b604051808060200180602001838103835285818151815260200191508051906020019080838360005b83811015610284578082015181840152602081019050610269565b50505050905090810190601f1680156102b15780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b838110156102ea5780820151818401526020810190506102cf565b50505050905090810190601f1680156103175780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b341561033257600080fd5b6104ad600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506109b9565b005b34156104ba57600080fd5b6104c2610acd565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156105025780820151818401526020810190506104e7565b50505050905090810190601f16801561052f5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610545610bb5565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561061b5780601f106105f05761010080835404028352916020019161061b565b820191906000526020600020905b8154815290600101906020018083116105fe57829003601f168201915b5050505050905090565b61062d610bb5565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107035780601f106106d857610100808354040283529160200191610703565b820191906000526020600020905b8154815290600101906020018083116106e657829003601f168201915b5050505050905090565b600080333073ffffffffffffffffffffffffffffffffffffffff1631915091509091565b600061073b610bc9565b610743610bb5565b61074b610bb5565b61075361053d565b925060008351141561076857600093506107df565b610770610acd565b925060008351141561078557600093506107df565b61078d6107e5565b915091508192506000835114156107a757600093506107df565b8092506000835114156107bd57600093506107df565b6107c5610625565b92506000835114156107da57600093506107df565b600193505b50505090565b6107ed610bb5565b6107f5610bb5565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600301600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600401818054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561090e5780601f106108e35761010080835404028352916020019161090e565b820191906000526020600020905b8154815290600101906020018083116108f157829003601f168201915b50505050509150808054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109aa5780601f1061097f576101008083540402835291602001916109aa565b820191906000526020600020905b81548152906001019060200180831161098d57829003601f168201915b50505050509050915091509091565b60a06040519081016040528086815260200185815260200184815260200183815260200182815250600160008873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000820151816000019080519060200190610a3c929190610bdd565b506020820151816001019080519060200190610a59929190610bdd565b506040820151816002019080519060200190610a76929190610bdd565b506060820151816003019080519060200190610a93929190610bdd565b506080820151816004019080519060200190610ab0929190610bdd565b509050506000808154809291906001019190505550505050505050565b610ad5610bb5565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206002018054600181600116156101000203166002900480601f016020809104026020016040519081016040528092919081815260200182805460018160011615610100020316600290048015610bab5780601f10610b8057610100808354040283529160200191610bab565b820191906000526020600020905b815481529060010190602001808311610b8e57829003601f168201915b5050505050905090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610c1e57805160ff1916838001178555610c4c565b82800160010185558215610c4c579182015b82811115610c4b578251825591602001919060010190610c30565b5b509050610c599190610c5d565b5090565b610c7f91905b80821115610c7b576000816000905550600101610c63565b5090565b905600a165627a7a72305820aaf62eb293540459ca6b7556102b5afa4bc90142ca6ff6bf7cc26cf8934123360029",
+  "sourceMap": "54:1310:1:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "54:1310:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;968:119;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;850:112:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;732:113:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;301:914:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1204:158:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;446:281:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1092:107;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;968:119:1;1018:6;;:::i;:::-;1043:13;:25;1057:10;1043:25;;;;;;;;;;;;;;;:37;;1036:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;968:119;:::o;850:112::-;896:6;;:::i;:::-;922:13;:25;936:10;922:25;;;;;;;;;;;;;;;:33;;914:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;850:112;:::o;732:113::-;780:7;789:4;813:10;825:4;:12;;;805:33;;;;732:113;;:::o;301:914:0:-;352:4;458:32;;:::i;:::-;747:11;;:::i;:::-;760;;:::i;:::-;499:16;:14;:16::i;:::-;458:58;;560:1;530:19;:26;:31;526:75;;;585:5;578:12;;;;526:75;638:10;:8;:10::i;:::-;610:39;;693:1;663:19;:26;:31;659:74;;;717:5;710:12;;;;659:74;775:11;:9;:11::i;:::-;742:44;;;;825:11;797:40;;881:1;851:19;:26;:31;847:74;;;905:5;898:12;;;;847:74;958:11;930:40;;1014:1;984:19;:26;:31;980:74;;;1038:5;1031:12;;;;980:74;1091:12;:10;:12::i;:::-;1063:41;;1148:1;1118:19;:26;:31;1114:74;;;1172:5;1165:12;;;;1114:74;1204:4;1197:11;;301:914;;;;;:::o;1204:158:1:-;1249:6;;:::i;:::-;1257;;:::i;:::-;1283:13;:25;1297:10;1283:25;;;;;;;;;;;;;;;:32;;1317:13;:25;1331:10;1317:25;;;;;;;;;;;;;;;:37;;1275:80;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1204:158;;:::o;446:281::-;623:70;;;;;;;;;626:10;623:70;;;;637:14;623:70;;;;652:8;623:70;;;;661:9;623:70;;;;671:21;623:70;;;600:13;:20;614:5;600:20;;;;;;;;;;;;;;;:93;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;703:15;;:17;;;;;;;;;;;;;446:281;;;;;;:::o;1092:107::-;1136:6;;:::i;:::-;1161:13;:25;1175:10;1161:25;;;;;;;;;;;;;;;:31;;1154:38;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1092:107;:::o;54:1310::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.15;\n\nimport \"./CVExtender.sol\";\n\ncontract BlockchainCV is CVExtender {\n    \n    struct Person {\n        string FirstName;\n        string LastName;\n    }\n    \n    struct CV {\n        string WebPage;\n        string Description;\n        string Title;\n        string Author;\n        string AuthorEmail;\n        mapping(address => Person) People;\n    }\n    \n    uint numberOfResumes;\n    mapping (address=>CV) ListOfResumes;\n\n    function addCV(address newCV, string newWebPage, string newDescription, string newTitle, string newAuthor, string newAuthorEmailAddress) public {\n        ListOfResumes[newCV] = CV(newWebPage,newDescription,newTitle,newAuthor,newAuthorEmailAddress);\n        numberOfResumes++;\n    }\n    function getCVAddress() public constant returns(address, uint) {\n        return (msg.sender, this.balance);\n    }\n    function getAddress() public constant returns(string) {\n        return  ListOfResumes[msg.sender].WebPage;\n    }\n\n    function getDescription() public constant returns(string) {\n        return ListOfResumes[msg.sender].Description;\n    }\n    function getTitle() public constant returns(string) {\n        return ListOfResumes[msg.sender].Title;\n    }\n    function getAuthor() public constant returns(string, string) {\n        return (ListOfResumes[msg.sender].Author, ListOfResumes[msg.sender].AuthorEmail);\n    }\n}\n",
+  "sourcePath": "C:\\Users\\crypto\\Projects\\blockchain-cv\\contracts\\Migrations.sol",
+  "ast": {
+    "absolutePath": "/C/Users/crypto/Projects/blockchain-cv/contracts/Migrations.sol",
+    "exportedSymbols": {
+      "BlockchainCV": [
+        243
+      ]
+    },
+    "id": 244,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 112,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".15"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "absolutePath": "/C/Users/crypto/Projects/blockchain-cv/contracts/CVExtender.sol",
+        "file": "./CVExtender.sol",
+        "id": 113,
+        "nodeType": "ImportDirective",
+        "scope": 244,
+        "sourceUnit": 111,
+        "src": "26:26:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 114,
+              "name": "CVExtender",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 110,
+              "src": "79:10:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CVExtender_$110",
+                "typeString": "contract CVExtender"
+              }
+            },
+            "id": 115,
+            "nodeType": "InheritanceSpecifier",
+            "src": "79:10:1"
+          }
+        ],
+        "contractDependencies": [
+          110
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 243,
+        "linearizedBaseContracts": [
+          243,
+          110
+        ],
+        "name": "BlockchainCV",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "BlockchainCV.Person",
+            "id": 120,
+            "members": [
+              {
+                "constant": false,
+                "id": 117,
+                "name": "FirstName",
+                "nodeType": "VariableDeclaration",
+                "scope": 120,
+                "src": "125:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 116,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "125:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 119,
+                "name": "LastName",
+                "nodeType": "VariableDeclaration",
+                "scope": 120,
+                "src": "151:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 118,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "151:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Person",
+            "nodeType": "StructDefinition",
+            "scope": 243,
+            "src": "101:72:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "BlockchainCV.CV",
+            "id": 135,
+            "members": [
+              {
+                "constant": false,
+                "id": 122,
+                "name": "WebPage",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "203:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 121,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "203:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 124,
+                "name": "Description",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "227:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 123,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "227:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 126,
+                "name": "Title",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "255:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 125,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "255:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 128,
+                "name": "Author",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "277:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 127,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "277:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 130,
+                "name": "AuthorEmail",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "300:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 129,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "300:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 134,
+                "name": "People",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "328:33:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$120_storage_$",
+                  "typeString": "mapping(address => struct BlockchainCV.Person storage ref)"
+                },
+                "typeName": {
+                  "id": 133,
+                  "keyType": {
+                    "id": 131,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "336:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "328:26:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$120_storage_$",
+                    "typeString": "mapping(address => struct BlockchainCV.Person storage ref)"
+                  },
+                  "valueType": {
+                    "contractScope": null,
+                    "id": 132,
+                    "name": "Person",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 120,
+                    "src": "347:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Person_$120_storage_ptr",
+                      "typeString": "struct BlockchainCV.Person storage pointer"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "CV",
+            "nodeType": "StructDefinition",
+            "scope": 243,
+            "src": "183:185:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 137,
+            "name": "numberOfResumes",
+            "nodeType": "VariableDeclaration",
+            "scope": 243,
+            "src": "378:20:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 136,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "378:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 141,
+            "name": "ListOfResumes",
+            "nodeType": "VariableDeclaration",
+            "scope": 243,
+            "src": "404:35:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+              "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+            },
+            "typeName": {
+              "id": 140,
+              "keyType": {
+                "id": 138,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "413:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "404:21:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 139,
+                "name": "CV",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 135,
+                "src": "422:2:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_CV_$135_storage_ptr",
+                  "typeString": "struct BlockchainCV.CV storage pointer"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 171,
+              "nodeType": "Block",
+              "src": "590:137:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 166,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 156,
+                        "name": "ListOfResumes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 141,
+                        "src": "600:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                          "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                        }
+                      },
+                      "id": 158,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 157,
+                        "name": "newCV",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 143,
+                        "src": "614:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "600:20:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CV_$135_storage",
+                        "typeString": "struct BlockchainCV.CV storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 160,
+                          "name": "newWebPage",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 145,
+                          "src": "626:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 161,
+                          "name": "newDescription",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 147,
+                          "src": "637:14:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 162,
+                          "name": "newTitle",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 149,
+                          "src": "652:8:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 163,
+                          "name": "newAuthor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 151,
+                          "src": "661:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 164,
+                          "name": "newAuthorEmailAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 153,
+                          "src": "671:21:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 159,
+                        "name": "CV",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 135,
+                        "src": "623:2:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_CV_$135_storage_ptr_$",
+                          "typeString": "type(struct BlockchainCV.CV storage pointer)"
+                        }
+                      },
+                      "id": 165,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "623:70:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CV_$135_memory",
+                        "typeString": "struct BlockchainCV.CV memory"
+                      }
+                    },
+                    "src": "600:93:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_CV_$135_storage",
+                      "typeString": "struct BlockchainCV.CV storage ref"
+                    }
+                  },
+                  "id": 167,
+                  "nodeType": "ExpressionStatement",
+                  "src": "600:93:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 169,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "703:17:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 168,
+                      "name": "numberOfResumes",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 137,
+                      "src": "703:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 170,
+                  "nodeType": "ExpressionStatement",
+                  "src": "703:17:1"
+                }
+              ]
+            },
+            "id": 172,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "addCV",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 154,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 143,
+                  "name": "newCV",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "461:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 142,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "461:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 145,
+                  "name": "newWebPage",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "476:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 144,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "476:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 147,
+                  "name": "newDescription",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "495:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 146,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "495:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 149,
+                  "name": "newTitle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "518:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 148,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "518:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 151,
+                  "name": "newAuthor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "535:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 150,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "535:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 153,
+                  "name": "newAuthorEmailAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "553:28:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 152,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "553:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "460:122:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 155,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "590:0:1"
+            },
+            "scope": 243,
+            "src": "446:281:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 185,
+              "nodeType": "Block",
+              "src": "795:50:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 179,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 255,
+                          "src": "813:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 180,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "813:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 181,
+                          "name": "this",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 268,
+                          "src": "825:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_BlockchainCV_$243",
+                            "typeString": "contract BlockchainCV"
+                          }
+                        },
+                        "id": 182,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "balance",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "825:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 183,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "812:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_uint256_$",
+                      "typeString": "tuple(address,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 178,
+                  "id": 184,
+                  "nodeType": "Return",
+                  "src": "805:33:1"
+                }
+              ]
+            },
+            "id": 186,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getCVAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 173,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "753:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 178,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 175,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 186,
+                  "src": "780:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 174,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "780:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 177,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 186,
+                  "src": "789:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 176,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "789:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "779:15:1"
+            },
+            "scope": 243,
+            "src": "732:113:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 197,
+              "nodeType": "Block",
+              "src": "904:58:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 191,
+                        "name": "ListOfResumes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 141,
+                        "src": "922:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                          "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                        }
+                      },
+                      "id": 194,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 192,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 255,
+                          "src": "936:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 193,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "936:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "922:25:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CV_$135_storage",
+                        "typeString": "struct BlockchainCV.CV storage ref"
+                      }
+                    },
+                    "id": 195,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "WebPage",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 122,
+                    "src": "922:33:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 190,
+                  "id": 196,
+                  "nodeType": "Return",
+                  "src": "914:41:1"
+                }
+              ]
+            },
+            "id": 198,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 187,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "869:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 190,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 189,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 198,
+                  "src": "896:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 188,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "896:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "895:8:1"
+            },
+            "scope": 243,
+            "src": "850:112:1",
+            "stateMutability": "view",
+            "superFunction": 23,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 209,
+              "nodeType": "Block",
+              "src": "1026:61:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 203,
+                        "name": "ListOfResumes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 141,
+                        "src": "1043:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                          "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                        }
+                      },
+                      "id": 206,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 204,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 255,
+                          "src": "1057:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 205,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1057:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1043:25:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CV_$135_storage",
+                        "typeString": "struct BlockchainCV.CV storage ref"
+                      }
+                    },
+                    "id": 207,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "Description",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 124,
+                    "src": "1043:37:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 202,
+                  "id": 208,
+                  "nodeType": "Return",
+                  "src": "1036:44:1"
+                }
+              ]
+            },
+            "id": 210,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getDescription",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 199,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "991:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 202,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 201,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 210,
+                  "src": "1018:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 200,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1018:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1017:8:1"
+            },
+            "scope": 243,
+            "src": "968:119:1",
+            "stateMutability": "view",
+            "superFunction": 6,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 221,
+              "nodeType": "Block",
+              "src": "1144:55:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 215,
+                        "name": "ListOfResumes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 141,
+                        "src": "1161:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                          "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                        }
+                      },
+                      "id": 218,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 216,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 255,
+                          "src": "1175:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 217,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1175:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1161:25:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CV_$135_storage",
+                        "typeString": "struct BlockchainCV.CV storage ref"
+                      }
+                    },
+                    "id": 219,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "Title",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 126,
+                    "src": "1161:31:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 214,
+                  "id": 220,
+                  "nodeType": "Return",
+                  "src": "1154:38:1"
+                }
+              ]
+            },
+            "id": 222,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getTitle",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 211,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1109:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 214,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 213,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 222,
+                  "src": "1136:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 212,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1136:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1135:8:1"
+            },
+            "scope": 243,
+            "src": "1092:107:1",
+            "stateMutability": "view",
+            "superFunction": 11,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 241,
+              "nodeType": "Block",
+              "src": "1265:97:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 229,
+                            "name": "ListOfResumes",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 141,
+                            "src": "1283:13:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                              "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                            }
+                          },
+                          "id": 232,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 230,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 255,
+                              "src": "1297:3:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 231,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1297:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1283:25:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_CV_$135_storage",
+                            "typeString": "struct BlockchainCV.CV storage ref"
+                          }
+                        },
+                        "id": 233,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "Author",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 128,
+                        "src": "1283:32:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 234,
+                            "name": "ListOfResumes",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 141,
+                            "src": "1317:13:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                              "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                            }
+                          },
+                          "id": 237,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 235,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 255,
+                              "src": "1331:3:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 236,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1331:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1317:25:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_CV_$135_storage",
+                            "typeString": "struct BlockchainCV.CV storage ref"
+                          }
+                        },
+                        "id": 238,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "AuthorEmail",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 130,
+                        "src": "1317:37:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      }
+                    ],
+                    "id": 239,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1282:73:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_string_storage_$",
+                      "typeString": "tuple(string storage ref,string storage ref)"
+                    }
+                  },
+                  "functionReturnParameters": 228,
+                  "id": 240,
+                  "nodeType": "Return",
+                  "src": "1275:80:1"
+                }
+              ]
+            },
+            "id": 242,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getAuthor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 223,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1222:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 228,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 225,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 242,
+                  "src": "1249:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 224,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1249:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 227,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 242,
+                  "src": "1257:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 226,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1257:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1248:16:1"
+            },
+            "scope": 243,
+            "src": "1204:158:1",
+            "stateMutability": "view",
+            "superFunction": 18,
+            "visibility": "public"
+          }
+        ],
+        "scope": 244,
+        "src": "54:1310:1"
+      }
+    ],
+    "src": "0:1365:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/crypto/Projects/blockchain-cv/contracts/Migrations.sol",
+    "exportedSymbols": {
+      "BlockchainCV": [
+        243
+      ]
+    },
+    "id": 244,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 112,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".15"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "absolutePath": "/C/Users/crypto/Projects/blockchain-cv/contracts/CVExtender.sol",
+        "file": "./CVExtender.sol",
+        "id": 113,
+        "nodeType": "ImportDirective",
+        "scope": 244,
+        "sourceUnit": 111,
+        "src": "26:26:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 114,
+              "name": "CVExtender",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 110,
+              "src": "79:10:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CVExtender_$110",
+                "typeString": "contract CVExtender"
+              }
+            },
+            "id": 115,
+            "nodeType": "InheritanceSpecifier",
+            "src": "79:10:1"
+          }
+        ],
+        "contractDependencies": [
+          110
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 243,
+        "linearizedBaseContracts": [
+          243,
+          110
+        ],
+        "name": "BlockchainCV",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "BlockchainCV.Person",
+            "id": 120,
+            "members": [
+              {
+                "constant": false,
+                "id": 117,
+                "name": "FirstName",
+                "nodeType": "VariableDeclaration",
+                "scope": 120,
+                "src": "125:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 116,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "125:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 119,
+                "name": "LastName",
+                "nodeType": "VariableDeclaration",
+                "scope": 120,
+                "src": "151:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 118,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "151:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Person",
+            "nodeType": "StructDefinition",
+            "scope": 243,
+            "src": "101:72:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "BlockchainCV.CV",
+            "id": 135,
+            "members": [
+              {
+                "constant": false,
+                "id": 122,
+                "name": "WebPage",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "203:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 121,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "203:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 124,
+                "name": "Description",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "227:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 123,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "227:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 126,
+                "name": "Title",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "255:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 125,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "255:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 128,
+                "name": "Author",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "277:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 127,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "277:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 130,
+                "name": "AuthorEmail",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "300:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 129,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "300:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 134,
+                "name": "People",
+                "nodeType": "VariableDeclaration",
+                "scope": 135,
+                "src": "328:33:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$120_storage_$",
+                  "typeString": "mapping(address => struct BlockchainCV.Person storage ref)"
+                },
+                "typeName": {
+                  "id": 133,
+                  "keyType": {
+                    "id": 131,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "336:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "328:26:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Person_$120_storage_$",
+                    "typeString": "mapping(address => struct BlockchainCV.Person storage ref)"
+                  },
+                  "valueType": {
+                    "contractScope": null,
+                    "id": 132,
+                    "name": "Person",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 120,
+                    "src": "347:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Person_$120_storage_ptr",
+                      "typeString": "struct BlockchainCV.Person storage pointer"
+                    }
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "CV",
+            "nodeType": "StructDefinition",
+            "scope": 243,
+            "src": "183:185:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 137,
+            "name": "numberOfResumes",
+            "nodeType": "VariableDeclaration",
+            "scope": 243,
+            "src": "378:20:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 136,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "378:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 141,
+            "name": "ListOfResumes",
+            "nodeType": "VariableDeclaration",
+            "scope": 243,
+            "src": "404:35:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+              "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+            },
+            "typeName": {
+              "id": 140,
+              "keyType": {
+                "id": 138,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "413:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "404:21:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 139,
+                "name": "CV",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 135,
+                "src": "422:2:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_CV_$135_storage_ptr",
+                  "typeString": "struct BlockchainCV.CV storage pointer"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 171,
+              "nodeType": "Block",
+              "src": "590:137:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 166,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 156,
+                        "name": "ListOfResumes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 141,
+                        "src": "600:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                          "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                        }
+                      },
+                      "id": 158,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 157,
+                        "name": "newCV",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 143,
+                        "src": "614:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "600:20:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CV_$135_storage",
+                        "typeString": "struct BlockchainCV.CV storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 160,
+                          "name": "newWebPage",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 145,
+                          "src": "626:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 161,
+                          "name": "newDescription",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 147,
+                          "src": "637:14:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 162,
+                          "name": "newTitle",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 149,
+                          "src": "652:8:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 163,
+                          "name": "newAuthor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 151,
+                          "src": "661:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 164,
+                          "name": "newAuthorEmailAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 153,
+                          "src": "671:21:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 159,
+                        "name": "CV",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 135,
+                        "src": "623:2:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_CV_$135_storage_ptr_$",
+                          "typeString": "type(struct BlockchainCV.CV storage pointer)"
+                        }
+                      },
+                      "id": 165,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "623:70:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CV_$135_memory",
+                        "typeString": "struct BlockchainCV.CV memory"
+                      }
+                    },
+                    "src": "600:93:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_CV_$135_storage",
+                      "typeString": "struct BlockchainCV.CV storage ref"
+                    }
+                  },
+                  "id": 167,
+                  "nodeType": "ExpressionStatement",
+                  "src": "600:93:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 169,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "703:17:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 168,
+                      "name": "numberOfResumes",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 137,
+                      "src": "703:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 170,
+                  "nodeType": "ExpressionStatement",
+                  "src": "703:17:1"
+                }
+              ]
+            },
+            "id": 172,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "addCV",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 154,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 143,
+                  "name": "newCV",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "461:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 142,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "461:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 145,
+                  "name": "newWebPage",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "476:17:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 144,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "476:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 147,
+                  "name": "newDescription",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "495:21:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 146,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "495:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 149,
+                  "name": "newTitle",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "518:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 148,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "518:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 151,
+                  "name": "newAuthor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "535:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 150,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "535:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 153,
+                  "name": "newAuthorEmailAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 172,
+                  "src": "553:28:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 152,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "553:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "460:122:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 155,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "590:0:1"
+            },
+            "scope": 243,
+            "src": "446:281:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 185,
+              "nodeType": "Block",
+              "src": "795:50:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 179,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 255,
+                          "src": "813:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 180,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "813:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 181,
+                          "name": "this",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 268,
+                          "src": "825:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_BlockchainCV_$243",
+                            "typeString": "contract BlockchainCV"
+                          }
+                        },
+                        "id": 182,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "balance",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "825:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 183,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "812:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_address_$_t_uint256_$",
+                      "typeString": "tuple(address,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 178,
+                  "id": 184,
+                  "nodeType": "Return",
+                  "src": "805:33:1"
+                }
+              ]
+            },
+            "id": 186,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getCVAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 173,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "753:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 178,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 175,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 186,
+                  "src": "780:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 174,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "780:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 177,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 186,
+                  "src": "789:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 176,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "789:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "779:15:1"
+            },
+            "scope": 243,
+            "src": "732:113:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 197,
+              "nodeType": "Block",
+              "src": "904:58:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 191,
+                        "name": "ListOfResumes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 141,
+                        "src": "922:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                          "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                        }
+                      },
+                      "id": 194,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 192,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 255,
+                          "src": "936:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 193,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "936:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "922:25:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CV_$135_storage",
+                        "typeString": "struct BlockchainCV.CV storage ref"
+                      }
+                    },
+                    "id": 195,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "WebPage",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 122,
+                    "src": "922:33:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 190,
+                  "id": 196,
+                  "nodeType": "Return",
+                  "src": "914:41:1"
+                }
+              ]
+            },
+            "id": 198,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 187,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "869:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 190,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 189,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 198,
+                  "src": "896:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 188,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "896:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "895:8:1"
+            },
+            "scope": 243,
+            "src": "850:112:1",
+            "stateMutability": "view",
+            "superFunction": 23,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 209,
+              "nodeType": "Block",
+              "src": "1026:61:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 203,
+                        "name": "ListOfResumes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 141,
+                        "src": "1043:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                          "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                        }
+                      },
+                      "id": 206,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 204,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 255,
+                          "src": "1057:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 205,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1057:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1043:25:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CV_$135_storage",
+                        "typeString": "struct BlockchainCV.CV storage ref"
+                      }
+                    },
+                    "id": 207,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "Description",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 124,
+                    "src": "1043:37:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 202,
+                  "id": 208,
+                  "nodeType": "Return",
+                  "src": "1036:44:1"
+                }
+              ]
+            },
+            "id": 210,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getDescription",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 199,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "991:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 202,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 201,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 210,
+                  "src": "1018:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 200,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1018:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1017:8:1"
+            },
+            "scope": 243,
+            "src": "968:119:1",
+            "stateMutability": "view",
+            "superFunction": 6,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 221,
+              "nodeType": "Block",
+              "src": "1144:55:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 215,
+                        "name": "ListOfResumes",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 141,
+                        "src": "1161:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                          "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                        }
+                      },
+                      "id": 218,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 216,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 255,
+                          "src": "1175:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 217,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1175:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1161:25:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_CV_$135_storage",
+                        "typeString": "struct BlockchainCV.CV storage ref"
+                      }
+                    },
+                    "id": 219,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "Title",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 126,
+                    "src": "1161:31:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 214,
+                  "id": 220,
+                  "nodeType": "Return",
+                  "src": "1154:38:1"
+                }
+              ]
+            },
+            "id": 222,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getTitle",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 211,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1109:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 214,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 213,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 222,
+                  "src": "1136:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 212,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1136:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1135:8:1"
+            },
+            "scope": 243,
+            "src": "1092:107:1",
+            "stateMutability": "view",
+            "superFunction": 11,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 241,
+              "nodeType": "Block",
+              "src": "1265:97:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 229,
+                            "name": "ListOfResumes",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 141,
+                            "src": "1283:13:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                              "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                            }
+                          },
+                          "id": 232,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 230,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 255,
+                              "src": "1297:3:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 231,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1297:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1283:25:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_CV_$135_storage",
+                            "typeString": "struct BlockchainCV.CV storage ref"
+                          }
+                        },
+                        "id": 233,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "Author",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 128,
+                        "src": "1283:32:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 234,
+                            "name": "ListOfResumes",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 141,
+                            "src": "1317:13:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_CV_$135_storage_$",
+                              "typeString": "mapping(address => struct BlockchainCV.CV storage ref)"
+                            }
+                          },
+                          "id": 237,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 235,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 255,
+                              "src": "1331:3:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 236,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1331:10:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1317:25:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_CV_$135_storage",
+                            "typeString": "struct BlockchainCV.CV storage ref"
+                          }
+                        },
+                        "id": 238,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "AuthorEmail",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 130,
+                        "src": "1317:37:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_storage",
+                          "typeString": "string storage ref"
+                        }
+                      }
+                    ],
+                    "id": 239,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1282:73:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_string_storage_$_t_string_storage_$",
+                      "typeString": "tuple(string storage ref,string storage ref)"
+                    }
+                  },
+                  "functionReturnParameters": 228,
+                  "id": 240,
+                  "nodeType": "Return",
+                  "src": "1275:80:1"
+                }
+              ]
+            },
+            "id": 242,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getAuthor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 223,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1222:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 228,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 225,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 242,
+                  "src": "1249:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 224,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1249:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 227,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 242,
+                  "src": "1257:6:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string memory"
+                  },
+                  "typeName": {
+                    "id": 226,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1257:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1248:16:1"
+            },
+            "scope": 243,
+            "src": "1204:158:1",
+            "stateMutability": "view",
+            "superFunction": 18,
+            "visibility": "public"
+          }
+        ],
+        "scope": 244,
+        "src": "54:1310:1"
+      }
+    ],
+    "src": "0:1365:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-03-07T01:54:14.483Z"
+}

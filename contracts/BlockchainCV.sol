@@ -4,42 +4,36 @@ import "./CVExtender.sol";
 
 contract BlockchainCV is CVExtender {
     
-    mapping (address=>CV) ListOfResumes;
-    
     struct CV {
         string cvWebPage;
         string cvDescription;
         string cvTitle;
         string cvAuthor;
+        string cvAuthorEmail;
     }
 
-     /**
-     * Your functions go here
-     *
-     * */
+    mapping (address=>CV) ListOfResumes;
 
-    //function myFunction1() public {}
-    //function myFunction2() public {}
-
-
-    /**
-     * Below is for our CV!
-     * */
-
-    function getListOfResumes() public constant returns(address resume) {
-        return resume.cvWebPage;
+    function setCVData(address newCV, string webPage, string description, string title, string author, string authorEmailAddress) public {
+        ListOfResumes[newCV] = CV(webPage,description,title,author,authorEmailAddress);
     }
+    
+    function getWebAddress() public constant returns(string) {
+        //return myCV.cvWebPage;
+        return ListOfResumes[msg.sender].cvWebPage;
+    }
+    
     function getAddress() public constant returns(string) {
-        return "http://www.example.org";
+        return  ListOfResumes[msg.sender].cvWebPage;
     }
 
     function getDescription() public constant returns(string) {
-        return "This is an example";
+        return ListOfResumes[msg.sender].cvDescription;
     }
     function getTitle() public constant returns(string) {
-        return "SimpleExample";
+        return ListOfResumes[msg.sender].cvTitle;
     }
     function getAuthor() public constant returns(string, string) {
-        return ("Thomas", "thomas@example.org");
+        return (ListOfResumes[msg.sender].cvAuthor, ListOfResumes[msg.sender].cvAuthorEmail);
     }
 }
