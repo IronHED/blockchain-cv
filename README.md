@@ -1,2 +1,2 @@
 # Project Blockchain CV
-This project will use a smart contract to store CV or resume information on the on a public blockchain.
+This project will use a smart contract to store CV, resume information, on a public blockchain.
