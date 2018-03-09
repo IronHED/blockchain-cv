@@ -8,10 +8,9 @@ Download geth for your platform from https://geth.ethereum.org/downloads/
 I'm usoing the MacOS version current version 
 
 ## Geth Mac-OS:
-Copy the "geth" file within the download zip into the following folder:
+Copy the "geth" file within the download zip into the following folder: "/usr/local/bin"
 
-"/usr/local/bin"
-Run the geth command below
+### Run the geth command below
 
 geth --networkid '15' --datadir ./cvchaindata/ --targetgaslimit '9000000000000' --rpc --rpccorsdomain 'localhost:8545' --mine console
 
