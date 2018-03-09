@@ -4,7 +4,7 @@ This project will use a smart contract to store a persons CV, resume information
 
 ## Install Instructions
 ### Geth
-Download geth for your platform from https://geth.ethereum.org/downloads/
+Download geth for your platform from https://geth.ethereum.org/downloads/ <br>
 I'm usoing the MacOS version current version 
 
 ## Geth Mac-OS:
@@ -16,7 +16,7 @@ geth --networkid '15' --datadir ./cvchaindata/ --targetgaslimit '9000000000000' 
 
 ## Verify the geth version
 
-Welcome to the Geth JavaScript console!
+Welcome to the Geth JavaScript console! <br>
 instance: Geth/v1.8.2-stable-b8b9f7f4/darwin-amd64/go1.9.4
 
 ## Truffle
