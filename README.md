@@ -13,15 +13,20 @@ geth --networkid '15' --datadir ./cvchaindata/ --targetgaslimit '9000000000000' 
 Welcome to the Geth JavaScript console! <br>
 instance: Geth/v1.8.2-stable-b8b9f7f4/darwin-amd64/go1.9.4
 ### Open a geth console.
-geth attach /Users/peter/privatenet/cvchaindata/geth.ipc
-
+Run the command: geth attach /Users/peter/privatenet/cvchaindata/geth.ipc <br>
 Welcome to the Geth JavaScript console!
 
-instance: Geth/v1.8.2-stable-b8b9f7f4/darwin-amd64/go1.9.4
-coinbase: 0xbff461b015434424a3712d6f351dc0b41a6ae72e
-at block: 725429 (Fri, 09 Mar 2018 08:29:42 EST)
- datadir: /Users/peter/privatenet/cvchaindata
+instance: Geth/v1.8.2-stable-b8b9f7f4/darwin-amd64/go1.9.4 <br>
+coinbase: 0xbff461b015134424a3712d6f351dc0b41a6ae72e<br>
+at block: 725429 (Fri, 09 Mar 2018 08:29:42 EST) <br>
+ datadir: /Users/peter/privatenet/cvchaindata<br>
  modules: admin:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0
+
+## geth CLI commands you will need to use.
+personal.newAccount();
+personal.unlockAccount(eth.accounts[0]);
+eth.accounts
+eth.coinbase
 
 
 ## Truffle
